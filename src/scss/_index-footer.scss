@@ -1,0 +1,156 @@
+.footer1 {
+    height: 54px;
+    line-height: 54px;
+    padding: 13px 0;
+    background: #3e3a39;
+    color: #fff;
+    font-size: 14px;
+    li {
+      float: left;
+      width: 235px;
+      text-align: center;
+      border-left: 1px solid #635d5c;
+      margin-left: -1px;
+    }
+    li:first-child {
+      border-left: 0;
+    }
+    li:first-child span {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -10.083333333333333em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 5.0833333333333335em;
+      height: 3em;
+    }
+    li:nth-child(2) span {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -5.083333333333333em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 5.0833333333333335em;
+      height: 4em;
+    }
+    li:nth-child(3) span {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -14.75em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 5.0833333333333335em;
+      height: 3em;
+    }
+    li:nth-child(4) span {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -0.8333333333333334em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 5.0833333333333335em;
+      height: 3em;
+    }
+    li:nth-child(5) span {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -30.666666666666664em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 5.0833333333333335em;
+      height: 3em;
+    }
+  }
+  .footer2 {
+    padding: 30px 0 30px;
+    background: #f1f1f1;
+    font-size: 14px;
+    box-sizing:border-box;
+  }
+  .ft {
+    height: 135px;
+  }
+  .footer-left {
+    float: left;
+    margin-right: 10px;
+    span {
+      width: 13.166667em;
+      height: 5.75em;
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20170330/d5746d16-fa9b-460a-87c9-a6e0c56c1a21.svg) no-repeat -0.8333333333333334em -24.25em;
+      background-size: 14.916667em 42.916667em;
+    }
+    p {
+      color: #3e3a39;
+      font-size: 12px;
+      margin-top: 14px;
+      position: relative;
+    }
+    a:first-child {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -39.41666666666667em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 2.6666666666666665em;
+      height: 2.6666666666666665em;
+      margin-left: 14px;
+      img {
+        position: absolute;
+        display: none;
+        top: -129px;
+        left: 27px;
+        z-index: 1000;
+      }
+    }
+    a:last-child {
+      vertical-align: middle;
+      display: inline-block;
+      background: url(https://img0.fengqucdn.com/cmsres/20160405/45e8dcbc-2fb9-43ff-86d6-0dbb752ca670.svg) no-repeat -0.8333333333333334em -35.083333333333336em;
+      background-size: 13.916666666666666em 42.916666666666664em;
+      width: 2.6666666666666665em;
+      height: 2.6666666666666665em;
+      margin-left: 14px;
+      img {
+        position: absolute;
+        display: none;
+        top: -129px;
+        left: 77px;
+        z-index: 1000;
+      }
+    }
+    a:hover img {
+      display: block;
+    }
+  }
+  .footer-mid {
+    float: left;
+    dl {
+      float: left;
+      margin-left: 98px;
+    }
+    dt {
+      font-size: 14px;
+      color: #3e3a39;
+      margin-bottom: 15px;
+    }
+    dd {
+      margin-bottom: 5px;
+    }
+    a {
+      font-size: 12px;
+      color: #999;
+    }
+  }
+  .footer-right {
+    float: right;
+    margin-right: 12px;
+    p {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    p {
+      font-size: 12px;
+      color: #999;
+    }
+  }
+  

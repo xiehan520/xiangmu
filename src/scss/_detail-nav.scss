@@ -1,0 +1,66 @@
+nav {
+    height: 37px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 2px 3px rgba(0,0,0,.08);
+    .nav-left {
+      float: left;
+      height: 37px;
+      line-height: 37px;
+      li {
+        float: left;
+        padding: 0 25px;
+      }
+      li:nth-child(1) {
+        padding-left: 0;
+      }
+      a {
+        color: #333333;
+        font-size: 14px;
+        display: block;
+        height:34px;
+      }
+      a:hover {
+        color: #e73736;
+        border-bottom: 3px solid #e73736;
+      }
+    }
+    .nav-right {
+      float: right;
+      li {
+        float: left;
+      }
+      a {
+        padding-left: 16px;
+        color: #999;
+      }
+      a:hover {
+        color: rgba(153, 153, 153, 0.8);
+      }
+      li:nth-child(1) span {
+          vertical-align: middle;
+          display: inline-block;
+          background: url(https://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.8em -46.25em;
+          background-size: 17.75em 49.083333333333336em;
+          width: 1.9em;
+          height: 2em;
+        }
+        li:nth-child(2) span {
+          vertical-align: middle;
+          display: inline-block;
+          background: url(https://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.8em -33.75em;
+          background-size: 17.75em 49.083333333333336em;
+          width: 1.9em;
+          height: 2em;
+        }
+        li:nth-child(3) span {
+          vertical-align: middle;
+          display: inline-block;
+          background: url(https://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.8em -19em;
+          background-size: 17.75em 49.083333333333336em;
+          width: 1.9em;
+          height: 2em;
+        }
+    }
+    
+  }

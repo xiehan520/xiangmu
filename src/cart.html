@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="https://www.fengqu.com/detail/favicon.ico" />
+        <title>丰趣海淘-购物车</title>
+    </head>
+    <link rel="stylesheet" href="../dist/css/cart.css">
+
+    <body>
+        <!-- 页面顶部 -->
+        <header>
+            <div class="center">
+                <!-- 顶部左边 -->
+                <div class="topcenter-left">
+                    <ul>
+                        <li><a href="http://10.31.157.32/js-1907/xiangmu/dist/index.html">海淘首页</a></li>
+                        <li><a href="#" id="signin">登录</a></li>
+                        <li><a href="#" id="register">注册</a></li>
+                        <li><a href="#" id="hello" style="display:none;"><span></span>，欢迎回来！</a></li>
+                        <li><a href="#" id="quit" style="display:none;">退出登录</a></li>
+                    </ul>
+                </div>
+                <!-- 顶部右边 -->
+                <div class="topcenter-right">
+                    <ul>
+                        <li><a href="#">
+                                下载丰趣海淘App
+                                <i class="app"><img src="../dist/img/down.png" alt=""></i>
+                            </a></li>
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">关注我们 <span></span></a>
+                            <ul class="we">
+                                <li class="wee xl">
+                                    <img src="https://img0.fengqucdn.com/cmsres/20160401/86a2ded9-cbf3-4bc1-b72e-42cdb150435e.png"
+                                        alt="">
+                                    <a href="#"><em></em>新浪微博</a></li>
+                                <li class="wee wx">
+                                    <img src="https://img0.fengqucdn.com/cmsres/20160401/05f4053a-bf69-4d26-ab20-2195ec7c5303.png"
+                                        alt="">
+                                    <a href="#"><em></em>微信公众号</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- logo 搜索框 购物车 -->
+        <section>
+            <div class="center">
+                <div class="lo">
+                    <a href="http://10.31.157.32/js-1907/xiangmu/dist/index.html" class="logo1">
+                    </a>
+                </div>
+                <div class="sc">
+                    <div class="search">
+                        <div class="searchbox">
+                            <input type="text"><button>搜索</button>
+                        </div>
+                        <div class="hotsearch">
+                            <ul>
+                                <li><a href="#">奶粉</a></li>
+
+                                <li><a href="#">面膜</a></li>
+
+                                <li><a href="#">纸尿裤</a></li>
+
+                                <li><a href="#">乐而雅</a></li>
+
+                                <li><a href="#">防晒</a></li>
+
+                                <li><a href="#">爽肤水</a></li>
+
+                                <li><a href="#">Skin</a></li>
+
+                                <li><a href="#">DHC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cart1">
+                        <a href="http://10.31.157.32/js-1907/xiangmu/dist/cart.html">
+                            <div class="icon">
+                                <span></span>
+                                <span class="allnum">0</span>
+                            </div>
+                            <p>
+                                去购物车结算
+                                <span></span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 购物车物品栏 -->
+        <article>
+            <div class="center">
+                <div class="empty">
+                    <span></span>
+                    <div class="nocart">购物车空空如也
+                        <a href="http://10.31.157.32/js-1907/xiangmu/dist/index.html" class="goshop">去逛逛吧~~</a>
+                    </div>
+                </div>
+                <table class="cartlist">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" name="all" class="allsel" checked>全选</th>
+                            <th>商品信息</th>
+                            <th>单价（元）</th>
+                            <th>数量</th>
+                            <th>金额</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tr class="baoyou">
+                        <td colspan="6"><span>满88包邮</span></td>
+                    </tr>
+                    <tbody class="tbody">
+                        <tr style="display: none;">
+                            <td><input type="checkbox" name="" checked><a href=""><img src="" alt=""></a></td>
+                            <td><a href="" class="title"></a>
+                                <p>容量:150ml</p>
+                            </td>
+                            <td><b></b></td>
+                            <td><button class="down">-</button><input type="text" value="1" class="num"><button
+                                    class="up">+</button>
+                            </td>
+                            <td><strong></strong></td>
+                            <td><a href="" class="del">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cartfooter">
+                    <div class="sle">
+                        <input type="checkbox" name="all" id="all" class="allsel" checked>
+                        <label for="all">全选</label>
+                        <a href="" class="delsle">删除选中商品</a>
+                    </div>
+                    <div class="count">
+                        <ul>
+                            <li><span>实付金额满88包邮</span><i>总价（不含运费）：</i><strong></strong></li>
+                            <li><i>已选商品<em class="allnum"></em>件</i><i>已节省：</i><b>￥0</b></li>
+                        </ul>
+                        <button class="tocal">去结算</button>
+                    </div>
+                </div>
+                <div class="also">
+                    <h3>大家都在买</h3>
+                    <ul>
+                        <li>
+                            <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html">
+                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1508636/250ce79efd8aac55371335559d1c91b1.jpeg"
+                                    alt="">
+                                <p>澳大利亚澳肌莱Skin Nutrient卸妆刷洗面奶卸妆+洗脸二合一洁面泡泡150ml</p>
+                            </a>
+                            <div class="buyy">
+                                <span>￥</span>
+                                <strong>158</strong>
+                                <button class="add">加入购物车</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html">
+                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1508636/250ce79efd8aac55371335559d1c91b1.jpeg"
+                                    alt="">
+                                <p>澳大利亚澳肌莱Skin Nutrient卸妆刷洗面奶卸妆+洗脸二合一洁面泡泡150ml</p>
+                            </a>
+                            <div class="buyy">
+                                <span>￥</span>
+                                <strong>158</strong>
+                                <button class="add">加入购物车</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html">
+                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1508636/250ce79efd8aac55371335559d1c91b1.jpeg"
+                                    alt="">
+                                <p>澳大利亚澳肌莱Skin Nutrient卸妆刷洗面奶卸妆+洗脸二合一洁面泡泡150ml</p>
+                            </a>
+                            <div class="buyy">
+                                <span>￥</span>
+                                <strong>158</strong>
+                                <button class="add">加入购物车</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html">
+                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1508636/250ce79efd8aac55371335559d1c91b1.jpeg"
+                                    alt="">
+                                <p>澳大利亚澳肌莱Skin Nutrient卸妆刷洗面奶卸妆+洗脸二合一洁面泡泡150ml</p>
+                            </a>
+                            <div class="buyy">
+                                <span>￥</span>
+                                <strong>158</strong>
+                                <button class="add">加入购物车</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <!-- 页面底部 -->
+        <footer>
+            <div class="footer1">
+                <div class="center">
+                    <ul>
+                        <li><span></span>正品原汁原味</li>
+                        <li><span></span>国检监督入仓</li>
+                        <li><span></span>快速清关报备</li>
+                        <li><span></span>国内物流配送</li>
+                        <li><span></span>用户收货确认</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="center">
+                    <div class="ft">
+                        <div class="footer-left">
+                            <span></span>
+                            <p>关注我们
+                                <a href="https://weibo.com/sfhaitao"><img
+                                        src="https://img0.fengqucdn.com/cmsres/20160401/8e5872f1-a782-4a11-bad0-a522b1e7e919.png"></a>
+                                <a href="#"><img
+                                        src="https://img0.fengqucdn.com/cmsres/20160401/07abef9d-0b76-4a85-b7e6-b2069fd7eb00.png"></a>
+                            </p>
+                        </div>
+                        <div class="footer-mid">
+                            <dl>
+                                <dt>丰趣海淘</dt>
+                                <dd><a href="https://www.fengqu.com/help/aboutus-aboutus.html" target="blank">关于我们</a>
+                                </dd>
+                                <dd><a href="https://www.fengqu.com/help/aboutus-policy.html" target="blank">法律政策</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>新手指南</dt>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=25"
+                                        target="blank">正品保证</a></dd>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=13"
+                                        target="blank">购物指南</a></dd>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=21"
+                                        target="blank">费用说明</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>帮助中心</dt>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=34"
+                                        target="blank">签收说明</a></dd>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=31"
+                                        target="blank">运输时效</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>联系我们</dt>
+                                <dd><a href="https://www.fengqu.com/order/service.html">在线客服 (周一至周日 9:00 - 21:00)</a>
+                                </dd>
+                                <dd><a href="https://www.fengqu.com/help/helpcenter.html#!&pageId=43">客服中心</a></dd>
+                                <dd><a href="https://www.fengqu.com/activity/2108.html">加入我们</a></dd>
+                            </dl>
+                        </div>
+                        <div class="footer-right">
+                            <p>扫一扫下载App</p>
+                            <img src="../dist/img/down.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>Copyright © 2016 FengQ.All Rights Reserved | 沪ICP备15040786号-3 上海牵趣网络科技有限公司 版权所有</p>
+                        <a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&serial=9031000020160415234035000000585860-SAIC_SHOW_310000-20160516163610801951&signData=MEUCIQCYDO1i2EWzKSq0eCYw3iopCO1JiFnbcb0Q1a4x3pa/HQIgcYy1cUDdWX/kLm3hokjLCRjfl7qdYy/YbhuTa5bpBhs="
+                            target="blank">
+                            <img src="https://img0.fengqucdn.com/cmsres/20190627/c147146f-8c5f-43dd-87cf-137806816a31.png"
+                                alt="">
+                        </a>
+                        <a href="https://scjgj.sh.gov.cn/platform/survey/step1_phone" target="blank">
+                            <img src="https://img0.fengqucdn.com/cmsres/20190627/1b019f4d-fa6a-4409-955c-cebf63777d7e.png"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- 登入注册 -->
+        <div class="login-register">
+            <div class="login">
+                <h1><span class="close"></span></h1>
+                <h3><b>登录</b></h3>
+                <form action="#">
+                    <input type="text" placeholder="手机号/邮箱" maxlength="40" class="pe" name="phoneandemail"><span
+                        class="iconfont a">&#xe663;</span>
+                    <div class="wrong1">请输入丰趣海淘帐号
+                    </div>
+                    <input type="password" placeholder="密码" maxlength="18" class="log" name="password">
+                    <span class="iconfont b">&#xe627;</span>
+                    <div class="wrong2">请输入密码</div>
+                    <input type="submit" value="登录" class="log" name="submit">
+                    <div class="novip">不是会员？<a href="#" class="toreg">去注册</a></div>
+                    <a href="#" class="forget">忘记密码</a>
+                </form>
+                <div class="wechat"><a href="#" class="iconfont w">&#xe638;<i>微信登录</i></a></div>
+                <div class="zfb"><a href="#" class="iconfont z">&#xe60a;<i>支付宝登录</i></a></div>
+            </div>
+            <!-- 注册框 -->
+            <div class="register">
+                <h1><span class="close"></span></h1>
+                <h3><b>注册</b></h3>
+                <form action="http://10.31.157.32/js-1907/xiangmu/php/register.php" method="post">
+                    <input type="text" placeholder="仅限中国大陆手机" maxlength="40" class="reg phone" name="phone">
+                    <div class="tip1">请输入您的手机号码</div>
+                    <input type="text" placeholder="设置邮箱" maxlength="40" class="reg email" name="email">
+                    <div class="tip2">请输入您的邮箱</div>
+                    <input type="password" placeholder="设置6-18位字母、数字或标点符号的密码" maxlength="18" class="reg"
+                        name="password">
+                    <span class="iconfont b">&#xe627;</span>
+                    <div class="tip3">请设置登录密码</div>
+                    <input type="submit" value="同意协议并注册" class="reg" name="submit">
+                    <a href="#" class="xieyi">《丰趣海淘服务协议》</a>
+                    <div class="hasid">已有账户？<a href="#" class="tologin">去登录</a></div>
+                </form>
+            </div>
+        </div>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+        <script src="../dist/js/cart.js"></script>
+    </body>
+
+</html>

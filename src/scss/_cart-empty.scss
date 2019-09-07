@@ -1,0 +1,32 @@
+.empty {
+    margin-top: 87px;
+    margin-bottom: 100px;
+    text-align: center;
+    span{
+      margin-right: 52px;
+      width: 112px;
+      height: 112px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url(https://img0.fengqu.com/sfht/1.1.258/img/icon.png) no-repeat -578px -334px;
+    }
+    .nocart{
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+    }
+    .goshop{
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 12px;
+      color: #fff;
+      background: #E73736;
+      border: 1px solid #dc3334;
+      text-align: center;
+    }
+  }
+  

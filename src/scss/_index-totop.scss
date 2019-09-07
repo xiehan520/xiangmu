@@ -1,0 +1,20 @@
+.totop {
+    padding: 18px 21px;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    display: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 100000;
+    cursor: pointer;
+    span {
+      width: 16px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url(https://img0.fengqu.com/sfht/1.1.258/img/icon.png) no-repeat -63px -109px;
+    }
+  }
+  

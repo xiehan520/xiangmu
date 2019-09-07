@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  font-size: 12px;
+  background: #f5f5f5;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.center {
+  width: 1180px;
+  margin: 0 auto;
+}
+@import "index-header";
+@import "index-section";
+@import "index-nav";
+@import "index-footer";
+@import "index-totop";
+@import "index-loginandregister";
+@import "cart-article";
+@import "cart-empty";

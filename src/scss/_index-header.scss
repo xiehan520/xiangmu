@@ -1,0 +1,110 @@
+header {
+    width: 100%;
+    background: #3e3a39;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    li {
+      float: left;
+      &:hover {
+          .we {
+            display: block;
+          }
+        }
+    }
+    a {
+      margin: 0 20px 0 0;
+      color: #ccc;
+      &:hover {
+        color: rgba(204, 204, 204, 0.8);
+        .app {
+          display: block;
+        }
+      }
+    }
+    .topcenter-right {
+      float: right;
+      .app {
+        display: none;
+        position: absolute;
+        left: -80px;
+        width: 244px;
+        height: 265px;
+        top: 11px;
+        z-index: 10000;
+        background: url(http://img0.fengqu.com/cmsres/20151218/05e07220-1923-411d-8f61-943a9e221bd6.png) no-repeat;
+      }
+      img {
+        width: 92px;
+        height: 92px;
+        margin: 115px 76px 0;
+        vertical-align: middle;
+      }
+      a {
+        margin: 0 0 0 20px;
+        position: relative;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.4em;
+        height: 0.3em;
+        background: url(http://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.83em -0.83em;
+      }
+    }
+    .we {
+      display: none;
+      position: relative;
+      background: #3e3a39;
+      position: absolute;
+      width: 100px;
+      height: 61px;
+      right: 40px;
+      z-index: 100000;
+    }
+    .wee {
+      float: none;
+      &:hover {
+        img {
+          display: block;
+        }
+      }
+    }
+    .xl {
+      em {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.3em;
+        height: 0.8333333333333334em;
+        background: url(http://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.83em -43.75em;
+      }
+      img {
+        display: none;
+        position: absolute;
+        width: 118px;
+        height: 108px;
+        right: 86px;
+        top: -4px;
+        margin: 0;
+      }
+    }
+  
+    .wx {
+      em {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.3em;
+        height: 1.3em;
+        background: url(http://img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png) no-repeat -0.83em -41.083333333333336em;
+      }
+      img {
+        display: none;
+        position: absolute;
+        width: 118px;
+        height: 108px;
+        right: 86px;
+        margin: 0;
+        top: -4px;
+      }
+    }
+  }
