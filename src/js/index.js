@@ -270,12 +270,12 @@
                 strhtml += `
                 <li>
                 <div class="pic">
-                    <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" target="blank"><img
+                    <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}"><img
                             src="${value.bpicurl}"
                             alt="${value.title}"></a>
                 </div>
                 <h3 class="tip">
-                    <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" target="blank">${value.title}</a>
+                    <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}">${value.title}</a>
                 </h3>
                 <p class="price">
                     <img src="${value.spicurl}" alt="">
@@ -299,10 +299,10 @@
             $.each(d, function (index, value) {
                 strhtml += `
                 <li>
-                   <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" target="blank" class="pic">
+                   <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" class="pic">
                       <img src="${value.picurl}">
                    </a>
-                   <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" target="blank" class="tip">
+                   <a href="http://10.31.157.32/js-1907/xiangmu/dist/detail.html?sid=${value.sid}" class="tip">
                       <h3 class="title">${value.title}</h3>
                          <p>
                            <span>￥</span>

@@ -223,61 +223,6 @@
     })
 
 }(jQuery);
-//放大镜
-!function($){
-    $('.simg li').first().addClass('red')
-    $('.simg li').on('click',function(){
-        let $src=$(this).find('img').attr('src')
-        $(this).addClass('red').siblings().removeClass('red')
-        $('.bimg img').attr({src:$src})
-    })
-    $('.bimg').hover(function(){
-        $('.img2').stop(true).animate({opacity:0}).hide().prev().show().stop(true).animate({opacity:1})
-            let $bili=$('.bimg').width()/$('.img1').width()
-            $('.bimg').on('mousemove',function(ev){
-                $('.img1').css({top:-ev.offsetY*$bili,left:-ev.offsetX*$bili})
-            })
-    },function(){
-        $('.img1').stop(true).animate({opacity:0}).hide().next().show().stop(true).animate({opacity:1})
-    })
-}(jQuery);
-//页面点击效果
-!function($){
-    
-    $('.goods-right').find('ol li a').on('click',function(){
-        $(this).addClass('red').append("<span></span>").siblings().removeClass('red').find('span').detach("span")
-    })
-    $('.goods-right').find('.more').on('click',function(){
-        if($('.goods-yh2').css('display')=='block'){
-            $('.goods-yh2').hide()
-        }else{
-            $('.goods-yh2').show()
-        }
-    })
-    //商品数量加减
-    $('.goods-right').find('.down').on('click',function(){
-        let $num=$(this).next().val()
-        if(!isNaN($num)){
-            $num--
-            if($num>=2){
-                $(this).next().val($num)
-            }else{
-                $(this).next().val(1)
-            }
-        }else{
-            $(this).next().val('NaN')
-        }
-    })
-    $('.goods-right').find('.up').on('click',function(){
-        let $num=$(this).prev().val()
-        if(!isNaN($num)){
-            $num++
-            $(this).prev().val($num)
-        }else{
-            $(this).prev().val('NaN')
-        }
-    })
-}(jQuery)
 //详情页获取数据
 !function($){
     var $sid = location.search.substring(1).split('=')[1];
@@ -387,4 +332,59 @@
             myobj.addcookie('cookienum', numarr.toString(), 10);
         }
     });
+}(jQuery)
+//放大镜
+!function($){
+    $('.simg li').first().addClass('red')
+    $('.simg li').on('click',function(){
+        let $src=$(this).find('img').attr('src')
+        $(this).addClass('red').siblings().removeClass('red')
+        $('.bimg img').attr({src:$src})
+    })
+    $('.bimg').hover(function(){
+        $('.img2').stop(true).animate({opacity:0}).hide().prev().show().stop(true).animate({opacity:1})
+            let $bili=$('.bimg').width()/$('.img1').width()
+            $('.bimg').on('mousemove',function(ev){
+                $('.img1').css({top:-ev.offsetY*$bili,left:-ev.offsetX*$bili})
+            })
+    },function(){
+        $('.img1').stop(true).animate({opacity:0}).hide().next().show().stop(true).animate({opacity:1})
+    })
+}(jQuery);
+//页面点击效果
+!function($){
+    
+    $('.goods-right').find('ol li a').on('click',function(){
+        $(this).addClass('red').append("<span></span>").siblings().removeClass('red').find('span').detach("span")
+    })
+    $('.goods-right').find('.more').on('click',function(){
+        if($('.goods-yh2').css('display')=='block'){
+            $('.goods-yh2').hide()
+        }else{
+            $('.goods-yh2').show()
+        }
+    })
+    //商品数量加减
+    $('.goods-right').find('.down').on('click',function(){
+        let $num=$(this).next().val()
+        if(!isNaN($num)){
+            $num--
+            if($num>=2){
+                $(this).next().val($num)
+            }else{
+                $(this).next().val(1)
+            }
+        }else{
+            $(this).next().val('NaN')
+        }
+    })
+    $('.goods-right').find('.up').on('click',function(){
+        let $num=$(this).prev().val()
+        if(!isNaN($num)){
+            $num++
+            $(this).prev().val($num)
+        }else{
+            $(this).prev().val('NaN')
+        }
+    })
 }(jQuery)
