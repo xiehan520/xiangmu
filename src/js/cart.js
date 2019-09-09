@@ -185,9 +185,9 @@
 
 !function ($) {
     //获取cookie,进行商品列表的渲染。
-    if (myobj.getcookie('cookiesid') && myobj.getcookie('cookienum')) {
-        let csid = myobj.getcookie('cookiesid').split(','); //数组
-        let cnum = myobj.getcookie('cookienum').split(',');
+    if (getcookie('cookiesid') && getcookie('cookienum')) {
+        let csid = getcookie('cookiesid').split(','); //数组
+        let cnum = getcookie('cookienum').split(',');
         $.each(csid, function (index, value) {
             showgoodslist(csid[index], cnum[index]);
         })
@@ -280,9 +280,9 @@
     var numarr = []; //存放商品的数量数组
     //将cookie取出转换成数组，利用数组进行判断是否是第一次。
     function cookieToArray() {
-        if (myobj.getcookie('cookiesid') && myobj.getcookie('cookienum')) {
-            sidarr = myobj.getcookie('cookiesid').split(',') //cookie存放商品编号的key值
-            numarr = myobj.getcookie('cookienum').split(',') //cookie存放商品数量的key值
+        if (getcookie('cookiesid') && getcookie('cookienum')) {
+            sidarr = getcookie('cookiesid').split(',') //cookie存放商品编号的key值
+            numarr = getcookie('cookienum').split(',') //cookie存放商品数量的key值
         }
     }
     //设置cookie
@@ -291,7 +291,7 @@
         var $index = obj.parents('.tbody').find('img').attr('sid');//通过sid找数量的位置
         console.log($index)
         numarr[$.inArray($index, sidarr)] = obj.parents('.tbody').find('.num').val();
-        myobj.addcookie('cookienum', numarr.toString(), 10);
+        addcookie('cookienum', numarr.toString(), 10);
         console.log(obj.parents('.tbody').find('.num').val())
     }
     //删除商品列表函数
@@ -304,17 +304,17 @@
 	    });
 	    sidarr.splice($index, 1);//删除数组对应的值
 	    numarr.splice($index, 1);//删除数组对应的值
-	    myobj.addcookie('cookiesid', sidarr.toString(), 10);//添加cookie
-	    myobj.addcookie('cookienum', numarr.toString(), 10);//添加cookie
+	    addcookie('cookiesid', sidarr.toString(), 10);//添加cookie
+	    addcookie('cookienum', numarr.toString(), 10);//添加cookie
     }
     //cookie操作方法
-    let myobj = {
-        addcookie: function (key, value, day) {
+    
+        function addcookie(key, value, day) {
             let date = new Date();
             date.setDate(date.getDate() + day);
             document.cookie = key + '=' + encodeURIComponent(value) + ';expires=' + date;
-        },
-        getcookie: function (key) {
+        }
+         function getcookie(key) {
             let arr = decodeURIComponent(document.cookie).split('; ');
             for (let value of arr) {
                 let newarr = value.split('=');
@@ -322,11 +322,11 @@
                     return newarr[1];
                 }
             }
-        },
-        delcookie: function (key) {
+        }
+         function delcookie(key) {
             addcookie(key, '', -1);
         }
-    }
+    
     //封装函数，实现商品列表的渲染。
     function showgoodslist(sid, num) { //sid:商品的编号   num：商品的数量。
         $.ajax({
@@ -353,10 +353,10 @@
             calc()
         })
     }
-    //如果购物车为空,隐藏empty
+    //如果购物车不为空,隐藏empty
     empty();
     function empty() {
-        if (myobj.getcookie('cookiesid') && myobj.getcookie('cookienum')) {
+        if (getcookie('cookiesid') && getcookie('cookienum')) {
             $('.empty').hide();
             $('.cartlist').show();
             $('.cartfooter').show();
@@ -364,8 +364,8 @@
             $('.empty').show();
             $('.cartlist').hide();
             $('.cartfooter').hide();
-            myobj.addcookie('cookiesid','',-1);
-            myobj.addcookie('cookienum','',-1)
+            addcookie('cookiesid','',-1);
+            addcookie('cookienum','',-1)
         }
     }
     //总价和总的数量

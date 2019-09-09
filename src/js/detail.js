@@ -37,9 +37,9 @@
             scrollTop: 0
         })
     })
-}(jQuery);
+
 //注册登录
-!function($){
+
     var $flag1 = false;
     var $flag2 = false;
     var $flag3 = false;
@@ -222,9 +222,9 @@
         }
     })
 
-}(jQuery);
+
 //详情页获取数据
-!function($){
+
     var $sid = location.search.substring(1).split('=')[1];
     $.ajax({
         url: 'http://10.31.157.32/js-1907/xiangmu/php/detail.php',
@@ -233,18 +233,19 @@
         },
         dataType: 'json'
     }).done(function (dd) { //获取后端返回的数据。
-        var $smallpic = dd.urls.split(',');
+        let $smallpic = dd.urls.split(',');
         $('.simg img').attr('src', dd.bpicurl);
         $('.bimg .bbimg').attr('sid', dd.sid); //添加自定义属性sid
         $('.bimg .bbimg').attr('src', $smallpic[0]); //添加自定义属性sid
         $('.goods-right .dic2 img').attr('src', dd.spicurl); //添加自定义属性sid
         $('.goods-right h2').text(dd.title);
         $('#src .tip').text(dd.title);
+        $('title').text('【丰趣海淘】'+dd.title+'，丰趣海淘！');
         $('.brand').text(dd.brand);
         $('.goodsprice1').text(dd.price);
         $('.goodsprice2').text(dd.delprice);
         //拼接小图片
-        var $htmlstr = ''
+        let $htmlstr = ''
         $.each($smallpic, function (index, value) {
             $htmlstr += `
             <li><img src="${value}" alt="" ></li>
@@ -259,18 +260,19 @@
     //     },
     //     dataType: 'json'
     // }).done(function (ee) { //获取后端返回的数据。
-    //     var $smallpic = ee.urls.split(',');
+    //     let $smallpic = ee.urls.split(',');
     //     $('.simg img').attr('src', ee.bpicurl);
     //     $('.bimg .bbimg').attr('sid', ee.sid); //添加自定义属性sid
     //     $('.bimg .bbimg').attr('src', $smallpic[0]); //添加自定义属性sid
     //     $('.goods-right .dic2 img').attr('src', ee.spicurl); //添加自定义属性sid
     //     $('.goods-right h2').text(ee.title);
+    //     $('title').text('【丰趣海淘】'+ee.title+'，丰趣海淘！');
     //     $('#src .tip').text(ee.title);
     //     $('.brand').text(ee.brand);
     //     $('.goodsprice1').text(ee.price);
     //     $('.goodsprice2').text(ee.delprice);
     //     //拼接小图片
-    //     var $htmlstr = ''
+    //     let $htmlstr = ''
     //     $.each($smallpic, function (index, value) {
     //         $htmlstr += `
     //         <li><img src="${value}" alt="" ></li>
@@ -278,19 +280,20 @@
     //     });
     //     $('.simg ul').html($htmlstr);
     // });
+    
     //加入购物车
     let sidarr = []; //存放商品的编号数组
     let numarr = []; //存放商品的数量数组
 
     //2.1取cookie(假设是第二次点击，获取第一次的cookie),提前约定cookie的key值
     //cookie添加， 获取， 删除
-    let myobj = {
-        addcookie: function (key, value, day) {
+    
+         function addcookie(key, value, day) {
             let date = new Date();
             date.setDate(date.getDate() + day);
             document.cookie = key + '=' + encodeURIComponent(value) + ';expires=' + date;
-        },
-        getcookie: function (key) {
+        }
+         function getcookie(key) {
             let arr = decodeURIComponent(document.cookie).split('; ');
             for (let value of arr) {
                 let newarr = value.split('=');
@@ -298,17 +301,22 @@
                     return newarr[1];
                 }
             }
-        },
-        delcookie: function (key) {
+        }
+         function delcookie(key) {
             addcookie(key, '', -1);
         }
-    }
+        let allnum=0;
+    
     //编号：[2,4,5] 数量：[12,34,68]
     //将cookie取出转换成数组，利用数组进行判断是否是第一次。
     function cookieToArray() {
-        if (myobj.getcookie('cookiesid') && myobj.getcookie('cookienum')) {
-            sidarr = myobj.getcookie('cookiesid').split(',') //cookie存放商品编号的key值
-            numarr = myobj.getcookie('cookienum').split(',') //cookie存放商品数量的key值
+        if (getcookie('cookiesid') && getcookie('cookienum')) {
+            sidarr = getcookie('cookiesid').split(',') //cookie存放商品编号的key值
+            numarr = getcookie('cookienum').split(',') //cookie存放商品数量的key值
+            $.each(numarr, function (index, value) {
+               allnum+=parseInt(value) 
+                console.log(allnum)
+            })
         }
     }
     $('.add').on('click', function () {
@@ -324,19 +332,19 @@
             // console.log(numarr[$.inArray($sid, sidarr)]);
             let changenum = parseInt(numarr[$.inArray($sid, sidarr)]) + parseInt($('#count').val());//原来的数量+当前的数量。
             numarr[$.inArray($sid, sidarr)]=changenum;//数组值改变
-            myobj.addcookie('cookienum', numarr.toString(), 10);//继续添加cookie 
+            addcookie('cookienum', numarr.toString(), 10);//继续添加cookie 
         } else { //不存在
             sidarr.push($sid); //将编号push进数组
-            myobj.addcookie('cookiesid', sidarr.toString(), 10); //存储cookie ，整个数组。
+            addcookie('cookiesid', sidarr.toString(), 10); //存储cookie ，整个数组。
             numarr.push($('#count').val()); //将商品的数量push进数组
-            myobj.addcookie('cookienum', numarr.toString(), 10);
+            addcookie('cookienum', numarr.toString(), 10);
         }
     });
-}(jQuery)
+
 //放大镜
-!function($){
-    $('.simg li').first().addClass('red')
-    $('.simg li').on('click',function(){
+
+    $('.simg ul').find('li').eq(0).addClass('red')
+    $('.simg ul').on('click','li',function(){
         let $src=$(this).find('img').attr('src')
         $(this).addClass('red').siblings().removeClass('red')
         $('.bimg img').attr({src:$src})
@@ -350,9 +358,9 @@
     },function(){
         $('.img1').stop(true).animate({opacity:0}).hide().next().show().stop(true).animate({opacity:1})
     })
-}(jQuery);
+
 //页面点击效果
-!function($){
+
     
     $('.goods-right').find('ol li a').on('click',function(){
         $(this).addClass('red').append("<span></span>").siblings().removeClass('red').find('span').detach("span")
